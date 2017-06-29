@@ -1,15 +1,15 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "50C1052C748BDD22F4F015C90C6D58093878A198",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2D42A5D7F2C12B918B023FE1B939CAE1EC265865",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "50C1052C748BDD22F4F015C90C6D58093878A198" : 9223372036854775807,
+    "2D42A5D7F2C12B918B023FE1B939CAE1EC265865" : 9223372036854775807,
     "35E1350C152423F58676D89AFCBA4597E7224105" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F56255C9-A6EB-4D6B-95A2-80737067C3C0",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "50C1052C748BDD22F4F015C90C6D58093878A198" : "Whitening\/",
+    "2D42A5D7F2C12B918B023FE1B939CAE1EC265865" : "Whitening\/",
     "35E1350C152423F58676D89AFCBA4597E7224105" : ".."
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "美白图片",
@@ -17,14 +17,14 @@
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "美白图片\/美白图片.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/YuSong0211\/Whitening.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2D42A5D7F2C12B918B023FE1B939CAE1EC265865"
+    },
+    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/YuSong0211\/URLSessionDownloadContinu.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "35E1350C152423F58676D89AFCBA4597E7224105"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/YuSong0211\/Whitening.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "50C1052C748BDD22F4F015C90C6D58093878A198"
     }
   ]
 }

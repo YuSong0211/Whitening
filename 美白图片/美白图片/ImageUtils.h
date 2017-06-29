@@ -10,9 +10,10 @@
 
 
 @interface ImageUtils : NSObject
-//
+//美白
 
 +(UIImage *)imageProcess:(UIImage*)image;
 
-
+//马赛克
++(UIImage*)imageMosaicProcess:(UIImage *)image;
 @end

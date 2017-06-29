@@ -14,7 +14,7 @@
 		BCA6F8291F0260B500744980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCA6F8281F0260B500744980 /* Assets.xcassets */; };
 		BCA6F82C1F0260B500744980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA6F82A1F0260B500744980 /* LaunchScreen.storyboard */; };
 		BCA6F8371F0260B500744980 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F8361F0260B500744980 /* ____Tests.m */; };
-		BCA6F8441F02611D00744980 /* ImageUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F8431F02611D00744980 /* ImageUtils.mm */; };
+		BCA6F8441F02611D00744980 /* ImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA6F8431F02611D00744980 /* ImageUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,7 @@
 		BCA6F8361F0260B500744980 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
 		BCA6F8381F0260B500744980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCA6F8421F02611D00744980 /* ImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtils.h; sourceTree = "<group>"; };
-		BCA6F8431F02611D00744980 /* ImageUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageUtils.mm; sourceTree = "<group>"; };
+		BCA6F8431F02611D00744980 /* ImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtils.m; sourceTree = "<group>"; };
 		BCA6F8451F026CA900744980 /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,7 +121,7 @@
 			children = (
 				BCA6F8451F026CA900744980 /* Color.h */,
 				BCA6F8421F02611D00744980 /* ImageUtils.h */,
-				BCA6F8431F02611D00744980 /* ImageUtils.mm */,
+				BCA6F8431F02611D00744980 /* ImageUtils.m */,
 			);
 			name = imagUtils;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 				BCA6F8241F0260B500744980 /* ViewController.m in Sources */,
 				BCA6F8211F0260B500744980 /* AppDelegate.m in Sources */,
 				BCA6F81E1F0260B500744980 /* main.m in Sources */,
-				BCA6F8441F02611D00744980 /* ImageUtils.mm in Sources */,
+				BCA6F8441F02611D00744980 /* ImageUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

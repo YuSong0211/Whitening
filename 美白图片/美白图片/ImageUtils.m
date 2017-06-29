@@ -87,5 +87,78 @@
     
     return newImage;
 }
+///打马赛克
++(UIImage*)imageMosaicProcess:(UIImage *)image{
+    
+    //第一步：获取图片的大小
+    CGImageRef imageRef = image.CGImage;
+    CGFloat width = CGImageGetWidth(imageRef);
+    CGFloat height = CGImageGetHeight(imageRef);
+    
+    //第二部：创建颜色空间（明确图片什么类型）
+    //彩色图片、灰色图片
+    //查看OpenCV源码实现（预览源码）
+    CGColorSpaceRef colorSpace = CGImageGetColorSpace(imageRef);
+    //第三步：创建图片上下文
+    CGContextRef contectRef = CGBitmapContextCreate(nil, width, height, 8, width * 4,colorSpace, kCGImageAlphaPremultipliedLast);
+    
+    //第四部：根据图片上下文，绘制图片
+    CGContextDrawImage(contectRef, CGRectMake(0, 0, width, height), imageRef);
+    //第五步：根据图片上下文，获取图片
+    unsigned char* imageData = (unsigned char*)CGBitmapContextGetData(contectRef);
+    
+    //第六步 开始图像处理-》打码处理
+    
+    int currentIndex = 0 , preIndex = 0;
+    
+    int level = 10;
+    //定义一个像素数组。用于保存像素点的值（ARGB）
+    unsigned char pixels[4] = {0};
+    
+    for (int i = 0; i < height - 1; i++) {
+        for (int j = 0; j < width; j++) {
+            //计算当前遍历位置
+            currentIndex = i * width + j;
+            //首先获取马赛克点第一行第一列的像素
+            if (i % level == 0 ) {
+                if (j % level == 0) {
+                    
+                    memcpy(pixels, imageData + 4 * currentIndex, 4);
+                }else{
+                    //其他列
+                    memcpy(imageData + 4 * currentIndex,pixels, 4);
+                }
+            }else{
+                
+                preIndex = (i - 1) * width + j;
+                
+                memcpy(imageData + 4 * currentIndex, imageData  + 4 * preIndex, 4);
+                
+            }
+            
+        }
+    }
+    
+    //第七步：获取图片数据集合
+    CGDataProviderRef providerRef = CGDataProviderCreateWithData(nil, imageData, width * height * 4, NULL);
+    //第八步：创建马赛克图片
+    CGImageRef  mosaicImageRef = CGImageCreate(width, height, 8, 32, width * 4, colorSpace, kCGImageAlphaPremultipliedLast, providerRef, NULL, NO, kCGRenderingIntentDefault);
+    //第九步创建输出图片
+    CGContextRef outputContextRef = CGBitmapContextCreate(nil, width, height, 8, width * 4, colorSpace , kCGImageAlphaPremultipliedLast);
+    CGContextDrawImage(outputContextRef, CGRectMake(0, 0, width, height), mosaicImageRef);
+    CGImageRef outputImageRef = CGBitmapContextCreateImage(outputContextRef);
+    UIImage * outputImage = [UIImage imageWithCGImage:outputImageRef];;
+    
+    //第十步：释放内存
+    CGImageRelease(outputImageRef);
+    CGImageRelease(mosaicImageRef);
+    CGColorSpaceRelease(colorSpace);
+    CGDataProviderRelease(providerRef);
+    CGContextRelease(contectRef);
+    CGContextRelease(outputContextRef);
+    
+    return outputImage;
+}
+
 
 @end

@@ -28,14 +28,16 @@
 
 - (IBAction)clickWhitening:(id)sender {
     
-    self.imageView.image = [ImageUtils imageProcess:self.imageView.image];
+//    self.imageView.image = [ImageUtils imageProcess:self.imageView.image];
+    self.imageView.image = [ImageUtils imageMosaicProcess:self.imageView.image];
+
     
-    NSString *path_sandox = NSHomeDirectory();
-    //设置一个图片的存储路径
-    NSString *imagePath = [path_sandox stringByAppendingString:@"/Documents/flower.png"];
-    [UIImagePNGRepresentation(self.imageView.image) writeToFile:imagePath atomically:NO];
-    
-    NSLog(@"%@",imagePath);
+//    NSString *path_sandox = NSHomeDirectory();
+//    //设置一个图片的存储路径
+//    NSString *imagePath = [path_sandox stringByAppendingString:@"/Documents/flower.png"];
+//    [UIImagePNGRepresentation(self.imageView.image) writeToFile:imagePath atomically:NO];
+//    
+//    NSLog(@"%@",imagePath);
 }
 
 @end
